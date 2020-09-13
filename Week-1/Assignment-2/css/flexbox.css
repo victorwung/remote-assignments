@@ -1,0 +1,48 @@
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 769px) {
+
+	.main-header,
+	.main-nav {
+		display: flex;
+	}
+
+	.main-header {
+		flex-direction: column;
+		align-items: center;
+	}
+
+}
+
+@media (min-width: 1200px) {
+
+	.main-header {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+}
+
+.row,
+.second-row {
+	display: flex;
+}
+  
+@media (min-width: 300px) {
+	.row {
+		display: flex;
+	  	flex-wrap: wrap;
+	}
+}
+  
+.col {
+	flex-grow: 1;
+	flex-basis: 400px /* alter */
+}
+
+.second-row {
+	justify-content: center;
+	align-items: center;
+}

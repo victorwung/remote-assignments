@@ -10,6 +10,7 @@ function max(numbers) {
     }
     return cur_max;
 }
+
 function findPosition(numbers, target) {
     let target_index = -1; // default as -1
     for (var i = 0; i < numbers.length; i++) {
@@ -23,6 +24,7 @@ function findPosition(numbers, target) {
     }
     return target_index;
 }
+
 console.log( max([1, 2, 4, 5]) ); // should print 5
 console.log( max([5, 2, 7, 1, 6]) ); // should print 7
 console.log( findPosition([5, 2, 7, 1, 6], 5) ); // should print 0

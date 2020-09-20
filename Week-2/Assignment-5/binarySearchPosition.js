@@ -18,7 +18,7 @@ function binarySearchPosition(numbers, target) {
             left = middle + 1;
         }
     }
-    return target_index; // return position of target after numbers sorted
+    return target_index; // return position of target in numbers
 }
 console.log( binarySearchPosition([1, 2, 5, 6, 7], 1) ); // should print 0
 console.log( binarySearchPosition([1, 2, 5, 6, 7], 6) ); // should print 3

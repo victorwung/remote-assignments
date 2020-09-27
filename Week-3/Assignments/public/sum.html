@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Music World</title>
+    <script>
+      function sendAJAX() {
+        let inputNum = document.getElementById("inputNum").value; // get input value
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("ajaxResult").innerHTML = this.responseText;
+          }
+        };
+        xhttp.open("GET", "/getData?number=" + inputNum, true);
+        console.log("/getData?number=" + inputNum); // for check
+        xhttp.send();
+        document.getElementById("mainAction").style.display = "none"; // hide mainAction div 
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Music World</h1>
+    </header>
+    <div id="mainAction">
+      <p>Enter a positive integer:</p>
+      <input id="inputNum" type="text" name="number"/>
+      <button type="button" onclick="sendAJAX()">Send Number</button>
+    </div>
+    <div id="ajaxResult">
+    
+    </div>
+    <footer>
+      <p>This is footer</p>
+    </footer>
+  </body>

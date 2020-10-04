@@ -2,7 +2,7 @@ function delayedResult(n1, n2, delayTime, callback) {
   setTimeout(function() {
     let result = n1 + n2;
     callback(result);
-  }, delayTime, n1, n2);
+  }, delayTime);
 };
 
 delayedResult(4, 5, 3000, function(result) {

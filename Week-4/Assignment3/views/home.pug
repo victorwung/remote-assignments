@@ -1,0 +1,35 @@
+extends layout.pug
+
+block content
+  section#content
+    h2 Sign Up
+    p #{signUpMsg}
+    form(action='/home', method='post')
+      label Email: 
+        input(type="text", name='acct')
+        |
+        br
+        |
+      label Password: 
+        input(type="password", name='pswd')
+        |
+        br
+        |
+      input(type="hidden", name='actiontype', value='isRegister')
+      button(type='submit') Submit
+
+    h2 Sign In
+    p #{signInMsg}
+    form(action='/home', method='post')
+      label Email: 
+        input(type="text", name='acct')
+        |
+        br
+        |
+      label Password: 
+        input(type="password", name='pswd')
+        |
+        br
+        |
+      input(type="hidden", name='actiontype', value='isLogin')
+      button(type='submit') Submit
